@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/real"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_book_blue"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/best_seller"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/topic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harry Potter"
+        android:layout_toRightOf="@+id/real"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/aqua"
+        android:layout_alignTop="@+id/real"/>
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="J. K. Rowling"
+        android:textColor="@color/aqua"
+        android:layout_toRightOf="@+id/real"
+        android:layout_below="@+id/topic"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/real"
+        android:layout_below="@+id/tagline"
+        android:rating="3.5"
+        android:stepSize="0.5"/>
+
+    <Button
+        android:id="@+id/read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/read"
+        android:layout_below="@+id/ratingBar"
+        android:backgroundTint="@color/aqua"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:backgroundTint="@color/aqua"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"/>
+
+
+</RelativeLayout>
